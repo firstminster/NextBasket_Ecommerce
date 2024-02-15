@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import { Meta } from './Meta';
+import { Container } from '@mui/material';
 
 interface Props extends MetaProps {
     children: JSX.Element;
@@ -15,13 +16,10 @@ const Layout: FC<Props> = ({
     description,
 }) => {
     return (
-        <div>
+        <>
             <Meta title={title} keywords={keywords} description={description} />
-            <div className="">
-
-                {children}
-            </div>
-        </div>
+            {children}
+        </>
     )
 }
 
