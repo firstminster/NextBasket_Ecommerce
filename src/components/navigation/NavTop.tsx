@@ -14,7 +14,7 @@ const NavTop = () => {
                         </IconButton>
                         <Typography variant="h6" sx={{ fontSize: '14px', marginRight: '20px' }} >
                             (225) 555-0118
-                        </Typography>s
+                        </Typography>
                         <IconButton>
                             <MailIcon />
                         </IconButton>

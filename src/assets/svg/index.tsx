@@ -9,7 +9,10 @@ import UserIcon from './user.svg'
 import MagnifierIcon from './magnifier.svg'
 import CartIcon from './cart.svg'
 import HeartIcon from './heart.svg'
+import BookReaderIcon from './book-reader.svg'
+import CarbonBookIcon from './carbon_book.svg'
+import IndicatorIcon from './indicator.svg'
 
 export {
-    PhoneIcon, MailIcon, InstagramIcon, FacebookIcon, TwitterIcon, YoutubeIcon, ArrowDownIcon, UserIcon, MagnifierIcon, CartIcon, HeartIcon
+    PhoneIcon, MailIcon, InstagramIcon, FacebookIcon, TwitterIcon, YoutubeIcon, ArrowDownIcon, UserIcon, MagnifierIcon, CartIcon, HeartIcon, BookReaderIcon, IndicatorIcon, CarbonBookIcon
 }
