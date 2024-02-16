@@ -41,10 +41,10 @@ const Post = ({ imageUrl }: Props) => {
                 </Typography>
                 <Box sx={{ display: "flex", alignItems: 'center', justifyContent: 'space-between', marginY: '25px', }}>
                     <Typography variant="body2" color="text.secondary" sx={{ fontSize: '12px', fontWeight: 400, color: '#BDBDBD', marginRight: '5px', display: "flex", alignItems: 'center' }}>
-                        <AlarmIcon />   22 April 2021
+                        <AlarmIcon style={{ marginRight: '5px' }} />   22 April 2021
                     </Typography>
                     <Typography variant="body2" color="text.secondary" sx={{ fontSize: '12px', fontWeight: 400, color: '#737373', display: "flex", alignItems: 'center' }}>
-                        <AlbumIcon /> 10 comments
+                        <AlbumIcon style={{ marginRight: '5px' }} /> 10 comments
                     </Typography>
                 </Box>
             </CardContent>

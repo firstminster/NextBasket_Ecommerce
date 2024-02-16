@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { reviewImgData } from '../../data'
 
 const Review = () => {
-    return (<Container maxWidth="lg" sx={{ marginY: '240px', }} >
+    return (<Container maxWidth="lg" sx={{ marginTop: '240px', }} >
         <Box sx={{ display: "flex", flexWrap: 'wrap', flexDirection: { xs: 'column', lg: 'row' }, alignItems: 'center', justifyContent: 'center' }}>
 
             <Box sx={{ display: "flex", flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginRight: { xs: '0px', lg: '130px' } }}>
@@ -50,7 +50,6 @@ const Review = () => {
                         </ImageListItem>
                     ))}
                 </ImageList>
-
             </Box>
         </Box>
     </Container >

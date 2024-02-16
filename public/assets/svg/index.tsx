@@ -18,7 +18,10 @@ import ArrowRightIcon from './arrow-right.svg'
 import TagIcon from './tag.svg'
 import StarFilledIcon from './star-filled.svg'
 import StarEmptyIcon from './star-empty.svg'
+import Facebookv2Icon from './facebook-v2.svg'
+import Twitterv2Icon from './twitter-v2.svg'
+import Instagramv2Icon from './instagram-v2.svg'
 
 export {
-    PhoneIcon, MailIcon, InstagramIcon, FacebookIcon, TwitterIcon, YoutubeIcon, ArrowDownIcon, UserIcon, MagnifierIcon, CartIcon, HeartIcon, BookReaderIcon, IndicatorIcon, CarbonBookIcon, AlarmIcon, AlbumIcon, ArrowRightIcon, TagIcon, StarFilledIcon, StarEmptyIcon
+    PhoneIcon, MailIcon, InstagramIcon, FacebookIcon, TwitterIcon, YoutubeIcon, ArrowDownIcon, UserIcon, MagnifierIcon, CartIcon, HeartIcon, BookReaderIcon, IndicatorIcon, CarbonBookIcon, AlarmIcon, AlbumIcon, ArrowRightIcon, TagIcon, StarFilledIcon, StarEmptyIcon, Facebookv2Icon, Twitterv2Icon, Instagramv2Icon
 }
