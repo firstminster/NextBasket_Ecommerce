@@ -99,8 +99,6 @@ const NavBar = () => {
                             <HeartIcon style={{ margin: '5px' }} /> 1
                         </IconButton>
                     </Box>
-
-
                 </Toolbar>
             </Container>
         </AppBar>
