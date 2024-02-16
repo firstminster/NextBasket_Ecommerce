@@ -61,7 +61,7 @@ const NavBar = () => {
                                 fontSize: '14px',
                             }}> Home </Link>
 
-                            <Link href='/' style={{
+                            <Link href='/shop' style={{
                                 textDecoration: "none",
                                 color: "#737373",
                                 fontSize: '14px',
@@ -107,7 +107,7 @@ const NavBar = () => {
                     <Box sx={{ display: 'flex', alignItems: 'center' }}>
                         <Box>
                             <UserIcon />
-                            <Link href="/" passHref style={{
+                            <Link href="/" style={{
                                 textDecoration: "none",
                                 color: "#23A6F0",
                                 fontSize: '14px',
@@ -117,7 +117,7 @@ const NavBar = () => {
 
                             </Link>
                             <span style={{ color: '#23A6F0', fontWeight: 'bold', fontSize: '14px', }} >/</span>
-                            <Link href="/" passHref style={{
+                            <Link href="/" style={{
                                 textDecoration: "none",
                                 color: "#23A6F0",
                                 fontSize: '14px',

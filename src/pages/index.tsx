@@ -10,9 +10,8 @@ import { CallToAction, Footer, Header, Layout, NavBar, NavTop, Posts, Products, 
 // const montserrat = Montserrat({ subsets: ["latin"] });
 
 const Home: NextPage = () => {
-  return (<Layout title="NextBasket" keywords="" description="" >
+  return (<Layout title="NextBasket" keywords="Home" description="Shop at your convenience" >
     <>
-
       <NavBar />
       <Header />
       <Products />

@@ -1,6 +1,7 @@
 import { Layout } from './layout'
 import NavBar from './navigation/NavBar'
 import NavTop from './navigation/NavTop'
+import NavPath from './navigation/NavPath'
 import Header from './Header'
 import Products from './product/Products'
 import Services from './Services'
@@ -11,5 +12,5 @@ import Footer from './Footer'
 
 
 export {
-    Layout, NavBar, NavTop, Header, Products, Services, Posts, Review, CallToAction, Footer
+    Layout, NavBar, NavTop, NavPath, Header, Products, Services, Posts, Review, CallToAction, Footer
 }
