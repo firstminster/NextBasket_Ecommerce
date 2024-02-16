@@ -1,4 +1,4 @@
-import { Layout, NavBar, NavPath } from '@/components'
+import { Description, Layout, NavBar, NavPath } from '@/components'
 
 
 const shop = () => {
@@ -6,6 +6,7 @@ const shop = () => {
         <>
             <NavBar />
             <NavPath activeHrefPath='/shop' activePath='Shop' />
+            <Description />
         </>
     </Layout>
     )
