@@ -16,6 +16,8 @@ import AlarmIcon from './alarm.svg'
 import AlbumIcon from './album.svg'
 import ArrowRightIcon from './arrow-right.svg'
 import ArrowRightv2Icon from './arrow-right-v2.svg'
+import ArrowRightv3Icon from './arrow-right-v3.svg'
+import ArrowLeftv3Icon from './arrow-left-v3.svg'
 import TagIcon from './tag.svg'
 import StarFilledIcon from './star-filled.svg'
 import StarEmptyIcon from './star-empty.svg'
@@ -29,7 +31,14 @@ import BirdIcon from './bird-logo.svg'
 import LyftIcon from './lyft.svg'
 import StripeIcon from './stripe.svg'
 import HooliIcon from './hooli.svg'
+import CircleBlueIcon from './circle-blue.svg'
+import CircleGreenIcon from './circle-green.svg'
+import CircleOrangeIcon from './circle-orange.svg'
+import CircleBlackIcon from './circle-black.svg'
+import BasketIcon from './basket.svg'
+import LikeIcon from './like.svg'
+import MoreIcon from './more.svg'
 
 export {
-    PhoneIcon, MailIcon, InstagramIcon, FacebookIcon, TwitterIcon, YoutubeIcon, ArrowDownIcon, UserIcon, MagnifierIcon, CartIcon, HeartIcon, BookReaderIcon, IndicatorIcon, CarbonBookIcon, AlarmIcon, AlbumIcon, ArrowRightIcon, ArrowRightv2Icon, TagIcon, StarFilledIcon, StarEmptyIcon, Facebookv2Icon, Twitterv2Icon, Instagramv2Icon, GreenLineIcon, AwsIcon, BingoIcon, BirdIcon, LyftIcon, StripeIcon, HooliIcon
+    PhoneIcon, MailIcon, InstagramIcon, FacebookIcon, TwitterIcon, YoutubeIcon, ArrowDownIcon, UserIcon, MagnifierIcon, CartIcon, HeartIcon, BookReaderIcon, IndicatorIcon, CarbonBookIcon, AlarmIcon, AlbumIcon, ArrowRightIcon, ArrowRightv2Icon, ArrowRightv3Icon, ArrowLeftv3Icon, TagIcon, StarFilledIcon, StarEmptyIcon, Facebookv2Icon, Twitterv2Icon, Instagramv2Icon, GreenLineIcon, AwsIcon, BingoIcon, BirdIcon, LyftIcon, StripeIcon, HooliIcon, CircleBlueIcon, CircleGreenIcon, CircleOrangeIcon, CircleBlackIcon, BasketIcon, LikeIcon, MoreIcon
 }

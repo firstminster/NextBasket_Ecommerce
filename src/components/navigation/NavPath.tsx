@@ -7,7 +7,7 @@ import { ArrowRightv2Icon } from '../../../public/assets'
 
 const NavPath = ({ activeHrefPath, activePath }: any) => {
     return (<Box sx={{ backgroundColor: '#FAFAFA', }}>
-        <Container maxWidth="xl" sx={{ display: "flex", flexDirection: 'row', alignItems: 'center', justifyContent: '', height: '92px' }} >
+        <Container maxWidth="lg" sx={{ display: "flex", flexDirection: 'row', alignItems: 'center', justifyContent: '', height: '92px' }} >
             <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: 'center', }}>
                 <Link href="/" passHref style={{
                     textDecoration: "none",

@@ -1,4 +1,4 @@
-"use-client"
+"use client"
 import { ArrowDownIcon, CartIcon, HeartIcon, MagnifierIcon, PhoneIcon, UserIcon, MailIcon, InstagramIcon, YoutubeIcon, FacebookIcon, TwitterIcon } from '../../../public/assets'
 import { AppBar, Box, Container, IconButton, List, ListItem, ListItemButton, ListItemText, Tab, Tabs, Toolbar, Typography } from '@mui/material'
 import Link from 'next/link'
@@ -8,7 +8,7 @@ const NavBar = () => {
     return (
         <AppBar position="sticky" sx={{ boxShadow: 'none', }}>
             <Toolbar disableGutters sx={{ backgroundColor: '#23856D', display: { xs: "none", lg: "flex" } }}>
-                <Container maxWidth="xl" sx={{ display: "flex", flexDirection: 'row', alignItems: 'center', }}>
+                <Container maxWidth="lg" sx={{ display: "flex", flexDirection: 'row', alignItems: 'center', }}>
                     <Box sx={{ flexGrow: 1, display: "flex", alignItems: 'center', }}>
                         <IconButton>
                             <PhoneIcon />
@@ -47,7 +47,7 @@ const NavBar = () => {
                 </Container>
             </Toolbar>
             <Toolbar disableGutters sx={{ backgroundColor: '#fff', color: '#000' }}>
-                <Container maxWidth="xl" sx={{ display: "flex", flexDirection: 'row', alignItems: 'center', }}>
+                <Container maxWidth="lg" sx={{ display: "flex", flexDirection: 'row', alignItems: 'center', }}>
                     <Box sx={{ flexGrow: 1, display: "flex", alignItems: 'center', }}>
                         <Typography variant="h3" component="div" sx={{ fontSize: '24px', fontWeight: '700', marginRight: '119px' }}>
                             Bandage

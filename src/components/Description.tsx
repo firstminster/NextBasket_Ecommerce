@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { GreenLineIcon } from '../../public/assets'
 
 const Description = () => {
-    return (<Box sx={{ marginBottom: '56px', marginTop: '98px', }}>
+    return (<Box sx={{ marginBottom: '56px', marginTop: '34px', }}>
         <Container maxWidth="lg" sx={{}} >
             <Box sx={{ display: "flex", flexDirection: 'row', alignItems: 'center', justifyContent: 'center', }}>
                 <Typography variant="h3" component="div" sx={{ fontSize: '14px', fontWeight: '600', color: '#737373', marginY: '34px' }}>
