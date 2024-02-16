@@ -1,4 +1,4 @@
-import { AlarmIcon, AlbumIcon, ArrowRightIcon, TagIcon } from '@/assets'
+import { AlarmIcon, AlbumIcon, ArrowRightIcon, TagIcon } from '../../../public/assets'
 import { Box, Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
 import React from 'react'
 
@@ -40,13 +40,12 @@ const Post = ({ imageUrl }: Props) => {
                     keystroke away.
                 </Typography>
                 <Box sx={{ display: "flex", alignItems: 'center', justifyContent: 'space-between', marginY: '25px', }}>
-                    <Typography variant="body2" color="text.secondary" sx={{ fontSize: '16px', fontWeight: 700, color: '#BDBDBD', marginRight: '5px', display: "flex", alignItems: 'center' }}>
+                    <Typography variant="body2" color="text.secondary" sx={{ fontSize: '12px', fontWeight: 400, color: '#BDBDBD', marginRight: '5px', display: "flex", alignItems: 'center' }}>
                         <AlarmIcon />   22 April 2021
                     </Typography>
-                    <Typography variant="body2" color="text.secondary" sx={{ fontSize: '16px', fontWeight: 700, color: '#23856D', display: "flex", alignItems: 'center' }}>
+                    <Typography variant="body2" color="text.secondary" sx={{ fontSize: '12px', fontWeight: 400, color: '#737373', display: "flex", alignItems: 'center' }}>
                         <AlbumIcon /> 10 comments
                     </Typography>
-
                 </Box>
             </CardContent>
             <CardActions sx={{ paddingX: '25px', paddingBottom: '35px' }} >

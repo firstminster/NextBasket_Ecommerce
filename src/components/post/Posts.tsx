@@ -14,9 +14,9 @@ const Posts = () => {
         </Box>
         <Box sx={{ display: "flex", flexWrap: 'wrap', flexDirection: 'row', alignItems: 'center', justifyContent: { xs: 'center', lg: 'space-between' }, marginBottom: '56px' }}>
 
-            <Post imageUrl="/images/post-1.png" />
-            <Post imageUrl="/images/post-2.png" />
-            <Post imageUrl="/images/post-3.png" />
+            <Post imageUrl="/assets/images/post-1.png" />
+            <Post imageUrl="/assets/images/post-2.png" />
+            <Post imageUrl="/assets/images/post-3.png" />
         </Box>
     </Container>
 

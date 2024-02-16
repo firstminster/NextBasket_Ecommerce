@@ -1,7 +1,7 @@
 import { Box, Container, Typography } from '@mui/material'
 import React from 'react'
 import Title from './common/Title'
-import { BookReaderIcon, CarbonBookIcon, IndicatorIcon } from '@/assets'
+import { BookReaderIcon, CarbonBookIcon, IndicatorIcon } from '../../public/assets'
 
 const Services = () => {
     return (<Container maxWidth="lg" sx={{ marginTop: '80px' }} >

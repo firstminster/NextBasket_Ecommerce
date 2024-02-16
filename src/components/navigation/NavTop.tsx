@@ -1,4 +1,4 @@
-import { FacebookIcon, InstagramIcon, MailIcon, PhoneIcon, TwitterIcon, YoutubeIcon } from '@/assets'
+import { FacebookIcon, InstagramIcon, MailIcon, PhoneIcon, TwitterIcon, YoutubeIcon } from '../../../public/assets'
 import { AppBar, Avatar, Box, Container, Icon, IconButton, Toolbar, Typography } from '@mui/material'
 import React from 'react'
 

@@ -8,7 +8,7 @@ const Product = () => {
                 component="img"
                 alt="green iguana"
                 height="140"
-                image="/images/product-1.png"
+                image="/assets/images/product-1.png"
                 sx={{ height: '238px' }}
             />
             <CardContent sx={{ height: '162px', display: "flex", flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }} >

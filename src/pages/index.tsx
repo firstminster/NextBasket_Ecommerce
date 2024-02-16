@@ -3,7 +3,7 @@ import Image from "next/image";
 // import { Inter, Montserrat } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import type { NextPage } from "next";
-import { Header, Layout, NavBar, NavTop, Posts, Products, Services } from "@/components";
+import { Header, Layout, NavBar, NavTop, Posts, Products, Review, Services } from "@/components";
 
 
 
@@ -18,6 +18,7 @@ const Home: NextPage = () => {
       <Products />
       <Services />
       <Posts />
+      <Review />
     </>
 
 
