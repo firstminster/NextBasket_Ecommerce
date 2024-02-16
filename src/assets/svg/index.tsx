@@ -12,7 +12,11 @@ import HeartIcon from './heart.svg'
 import BookReaderIcon from './book-reader.svg'
 import CarbonBookIcon from './carbon_book.svg'
 import IndicatorIcon from './indicator.svg'
+import AlarmIcon from './alarm.svg'
+import AlbumIcon from './album.svg'
+import ArrowRightIcon from './arrow-right.svg'
+import TagIcon from './tag.svg'
 
 export {
-    PhoneIcon, MailIcon, InstagramIcon, FacebookIcon, TwitterIcon, YoutubeIcon, ArrowDownIcon, UserIcon, MagnifierIcon, CartIcon, HeartIcon, BookReaderIcon, IndicatorIcon, CarbonBookIcon
+    PhoneIcon, MailIcon, InstagramIcon, FacebookIcon, TwitterIcon, YoutubeIcon, ArrowDownIcon, UserIcon, MagnifierIcon, CartIcon, HeartIcon, BookReaderIcon, IndicatorIcon, CarbonBookIcon, AlarmIcon, AlbumIcon, ArrowRightIcon, TagIcon
 }

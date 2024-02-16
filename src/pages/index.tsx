@@ -12,7 +12,7 @@ import { Header, Layout, NavBar, NavTop, Posts, Products, Services } from "@/com
 const Home: NextPage = () => {
   return (<Layout title="NextBasket" keywords="" description="" >
     <>
-      <NavTop />
+      {/* <NavTop /> */}
       <NavBar />
       <Header />
       <Products />
