@@ -4,7 +4,7 @@ import { Facebookv2Icon, Instagramv2Icon, Twitterv2Icon } from '../../public/ass
 
 const Footer = () => {
     return (<Box sx={{}}>
-        <Box sx={{ marginBottom: '56px', backgroundColor: '#FAFAFA', marginTop: '98px', }}>
+        <Box sx={{ marginBottom: '56px', backgroundColor: '#FAFAFA', }}>
             <Container maxWidth="lg" sx={{ display: "flex", flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: '138px' }} >
                 <Typography variant="h3" component="div" sx={{ fontSize: '24px', fontWeight: '700', }}>
                     Bandage

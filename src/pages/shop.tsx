@@ -1,4 +1,4 @@
-import { Description, Layout, NavBar, NavPath } from '@/components'
+import { Description, Footer, Layout, NavBar, NavPath, ProductDetails, Sponsor } from '@/components'
 
 
 const shop = () => {
@@ -6,7 +6,10 @@ const shop = () => {
         <>
             <NavBar />
             <NavPath activeHrefPath='/shop' activePath='Shop' />
+            <ProductDetails />
             <Description />
+            <Sponsor />
+            <Footer />
         </>
     </Layout>
     )

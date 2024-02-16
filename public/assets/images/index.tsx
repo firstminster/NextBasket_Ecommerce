@@ -12,8 +12,11 @@ import ReviewImg6 from './review-6.png'
 import ReviewImg7 from './review-7.png'
 import ReviewImg8 from './review-8.png'
 import ReviewImg9 from './review-9.png'
+import ProductDisplayImg1 from './product-img-1.png'
+import ProductDisplayImg2 from './product-img-2.png'
+import ProductDisplayImg3 from './product-img-3.png'
 
 
 export {
-    HeaderImg1, HeaderImg2, HeaderImg3, HeaderImg4, ProductImg1, ReviewImg1, ReviewImg2, ReviewImg3, ReviewImg4, ReviewImg5, ReviewImg6, ReviewImg7, ReviewImg8, ReviewImg9
+    HeaderImg1, HeaderImg2, HeaderImg3, HeaderImg4, ProductImg1, ReviewImg1, ReviewImg2, ReviewImg3, ReviewImg4, ReviewImg5, ReviewImg6, ReviewImg7, ReviewImg8, ReviewImg9, ProductDisplayImg1, ProductDisplayImg2, ProductDisplayImg3
 }
