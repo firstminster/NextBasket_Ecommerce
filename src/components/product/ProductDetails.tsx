@@ -48,15 +48,7 @@ const ProductDetails = ({ product }: any) => {
                                     )
                                 })
                             }
-                            {/* <Image src='/assets/images/product-img-2.png '
-                                alt="desc-image"
-                                width={100}
-                                height={75} />
 
-                            <Image src='/assets/images/product-img-3.png '
-                                alt="desc-image"
-                                width={100}
-                                height={75} style={{ marginLeft: '19px' }} /> */}
 
                         </Box>
                     </Box>
@@ -78,7 +70,10 @@ const ProductDetails = ({ product }: any) => {
                             </Typography>
                         </Box>
                         <Typography variant="h4" component="div" sx={{ fontSize: '24px', fontWeight: 700, color: '#252B42', marginY: '20px' }} >
-                            ${product.price}
+                            {new Intl.NumberFormat("en-US", {
+                                style: "currency",
+                                currency: "USD",
+                            }).format(product.price)}
                         </Typography>
                         <Box sx={{ display: "flex", alignItems: 'center', justifyContent: 'center', }}>
                             <Typography variant="h6" component="div" sx={{ fontSize: '14px', fontWeight: 700, color: '#737373', }} >

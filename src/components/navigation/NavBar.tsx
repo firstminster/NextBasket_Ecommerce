@@ -6,6 +6,7 @@ import { AppBar, Box, Container, IconButton, List, ListItem, ListItemButton, Lis
 import Carts from '../cart/Carts';
 import { cartSelector } from '@/features/cart';
 import { useAppSelector } from '@/hooks';
+import WishLists from '../wishList/WishLists';
 
 
 
@@ -24,6 +25,7 @@ const NavBar = () => {
 
 
     const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null);
+    const [anchorHeartEl, setAnchorHeartEl] = React.useState<HTMLButtonElement | null>(null);
 
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         setAnchorEl(event.currentTarget);
@@ -33,8 +35,18 @@ const NavBar = () => {
         setAnchorEl(null);
     };
 
+    const handleHeartClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+        setAnchorHeartEl(event.currentTarget);
+    };
+
+    const handleHeartClose = () => {
+        setAnchorHeartEl(null);
+    };
+
     const open = Boolean(anchorEl);
+    const openHeart = Boolean(anchorHeartEl);
     const id = open ? 'simple-popover' : undefined;
+    const idHeart = openHeart ? 'simple-popover' : undefined;
 
 
     return (
@@ -162,29 +174,40 @@ const NavBar = () => {
                             <MagnifierIcon />
                         </IconButton>
 
-                        <>
 
-                            <IconButton onClick={handleClick} sx={{ marginRight: '30px', color: '#23A6F0', fontWeight: '400', fontSize: '12px', }}>
-                                <CartIcon style={{ margin: '5px' }} /> {cartCount}
-                            </IconButton>
-                            <Popover
-                                id={id}
-                                open={open}
-                                anchorEl={anchorEl}
-                                onClose={handleClose}
-                                anchorOrigin={{
-                                    vertical: 'bottom',
-                                    horizontal: 'left',
-                                }}
-                                sx={{ maxWidth: '100%' }}
-                            >
-                                <Carts />
-                            </Popover>
-                        </>
 
-                        <IconButton sx={{ color: '#23A6F0', fontWeight: '400', fontSize: '12px', }}>
+                        <IconButton onClick={handleClick} sx={{ marginRight: '30px', color: '#23A6F0', fontWeight: '400', fontSize: '12px', }}>
+                            <CartIcon style={{ margin: '5px' }} /> {cartCount}
+                        </IconButton>
+                        <Popover
+                            id={id}
+                            open={open}
+                            anchorEl={anchorEl}
+                            onClose={handleClose}
+                            anchorOrigin={{
+                                vertical: 'bottom',
+                                horizontal: 'left',
+                            }}
+                        >
+                            <Carts />
+                        </Popover>
+
+
+                        <IconButton onClick={handleHeartClick} sx={{ color: '#23A6F0', fontWeight: '400', fontSize: '12px', }}>
                             <HeartIcon style={{ margin: '5px' }} /> 1
                         </IconButton>
+                        <Popover
+                            id={idHeart}
+                            open={openHeart}
+                            anchorEl={anchorHeartEl}
+                            onClose={handleHeartClose}
+                            anchorOrigin={{
+                                vertical: 'bottom',
+                                horizontal: 'left',
+                            }}
+                        >
+                            <WishLists />
+                        </Popover>
                     </Box>
                 </Container>
             </Toolbar>

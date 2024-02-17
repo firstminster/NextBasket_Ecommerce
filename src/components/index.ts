@@ -13,9 +13,10 @@ import ProductDetails from './product/ProductDetails'
 import Description from './Description'
 import Sponsor from './Sponsor'
 import Carts from './cart/Carts'
+import WishLists from './wishList/WishLists'
 import Footer from './Footer'
 
 
 export {
-    Layout, NavBar, NavTop, NavPath, Header, FeaturedProducts, BestsellerProducts, Services, Posts, Review, CallToAction, ProductDetails, Description, Sponsor, Carts, Footer
+    Layout, NavBar, NavTop, NavPath, Header, FeaturedProducts, BestsellerProducts, Services, Posts, Review, CallToAction, ProductDetails, Description, Sponsor, Carts, WishLists, Footer
 }

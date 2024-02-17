@@ -31,10 +31,16 @@ const Product = ({ id, title, category, thumbnail, price, discountPercentage, ha
                 </Typography>
                 <Box sx={{ display: "flex", alignItems: 'center', justifyContent: 'center' }}>
                     <Typography variant="body2" color="text.secondary" sx={{ fontSize: '16px', fontWeight: 700, color: '#BDBDBD', marginRight: '5px' }}>
-                        ${price}
+                        {new Intl.NumberFormat("en-US", {
+                            style: "currency",
+                            currency: "USD",
+                        }).format(price)}
                     </Typography>
                     <Typography variant="body2" color="text.secondary" sx={{ fontSize: '16px', fontWeight: 700, color: '#23856D', }}>
-                        ${discountPercentage}
+                        {new Intl.NumberFormat("en-US", {
+                            style: "currency",
+                            currency: "USD",
+                        }).format(discountPercentage)}
                     </Typography>
                 </Box>
             </CardContent>
