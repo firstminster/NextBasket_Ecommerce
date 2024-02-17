@@ -1,10 +1,27 @@
 "use client"
-import { ArrowDownIcon, CartIcon, HeartIcon, MagnifierIcon, PhoneIcon, UserIcon, MailIcon, InstagramIcon, YoutubeIcon, FacebookIcon, TwitterIcon } from '../../../public/assets'
-import { AppBar, Box, Container, IconButton, List, ListItem, ListItemButton, ListItemText, Tab, Tabs, Toolbar, Typography } from '@mui/material'
 import Link from 'next/link'
+import * as React from 'react';
+import { ArrowDownIcon, CartIcon, HeartIcon, MagnifierIcon, PhoneIcon, UserIcon, MailIcon, InstagramIcon, YoutubeIcon, FacebookIcon, TwitterIcon } from '../../../public/assets'
+import { AppBar, Box, Container, IconButton, List, ListItem, ListItemButton, ListItemText, Tab, Tabs, Toolbar, Typography, Popover, Button } from '@mui/material';
+import Carts from '../cart/Carts';
+
 
 
 const NavBar = () => {
+    const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null);
+
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+    const open = Boolean(anchorEl);
+    const id = open ? 'simple-popover' : undefined;
+
+
     return (
         <AppBar position="sticky" sx={{ boxShadow: 'none', }}>
             <Toolbar disableGutters sx={{ backgroundColor: '#23856D', display: { xs: "none", lg: "flex" } }}>
@@ -130,9 +147,24 @@ const NavBar = () => {
                             <MagnifierIcon />
                         </IconButton>
 
-                        <IconButton sx={{ marginRight: '30px', color: '#23A6F0', fontWeight: '400', fontSize: '12px', }}>
-                            <CartIcon style={{ margin: '5px' }} /> 1
-                        </IconButton>
+                        <>
+
+                            <IconButton onClick={handleClick} sx={{ marginRight: '30px', color: '#23A6F0', fontWeight: '400', fontSize: '12px', }}>
+                                <CartIcon style={{ margin: '5px' }} /> 1
+                            </IconButton>
+                            <Popover
+                                id={id}
+                                open={open}
+                                anchorEl={anchorEl}
+                                onClose={handleClose}
+                                anchorOrigin={{
+                                    vertical: 'bottom',
+                                    horizontal: 'left',
+                                }}
+                            >
+                                <Carts />
+                            </Popover>
+                        </>
 
                         <IconButton sx={{ color: '#23A6F0', fontWeight: '400', fontSize: '12px', }}>
                             <HeartIcon style={{ margin: '5px' }} /> 1

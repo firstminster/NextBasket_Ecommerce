@@ -3,7 +3,7 @@ import { createSelector } from '@reduxjs/toolkit';
 
 export const selectCart = (state: RootState) => state.cart
 
-export const productSelector = createSelector(
+export const cartSelector = createSelector(
     selectCart,
     state => state
 )

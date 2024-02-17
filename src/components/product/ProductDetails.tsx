@@ -60,8 +60,7 @@ const ProductDetails = ({ product }: any) => {
 
                         </Box>
                     </Box>
-                    {/* <ArrowRightv3Icon style={{ position: 'relative', top: '300px', left: '450px', color: '#000' }} />
-                    <ArrowLeftv3Icon style={{ position: 'relative', top: '270px', left: '30px', color: '#000' }} /> */}
+
 
 
                     <Box sx={{ display: "flex", flexDirection: 'column', alignItems: 'start', justifyContent: '', marginLeft: '100px' }}>

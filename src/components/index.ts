@@ -12,9 +12,10 @@ import CallToAction from './CallToAction'
 import ProductDetails from './product/ProductDetails'
 import Description from './Description'
 import Sponsor from './Sponsor'
+import Carts from './cart/Carts'
 import Footer from './Footer'
 
 
 export {
-    Layout, NavBar, NavTop, NavPath, Header, FeaturedProducts, BestsellerProducts, Services, Posts, Review, CallToAction, ProductDetails, Description, Sponsor, Footer
+    Layout, NavBar, NavTop, NavPath, Header, FeaturedProducts, BestsellerProducts, Services, Posts, Review, CallToAction, ProductDetails, Description, Sponsor, Carts, Footer
 }
