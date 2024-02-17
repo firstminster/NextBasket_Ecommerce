@@ -1,12 +1,13 @@
 import { Avatar, Box, Button, Card, CardMedia, Container, Divider, IconButton, Typography } from '@mui/material'
-import Image from 'next/image'
-import { ArrowLeftv3Icon, ArrowRightv3Icon, BasketIcon, CircleBlackIcon, CircleBlueIcon, CircleGreenIcon, CircleOrangeIcon, LikeIcon, MoreIcon, StarEmptyIcon, StarFilledIcon } from '../../../public/assets'
+import { BasketIcon, CircleBlackIcon, CircleBlueIcon, CircleGreenIcon, CircleOrangeIcon, LikeIcon, MoreIcon, StarEmptyIcon, StarFilledIcon } from '../../../public/assets'
 import { useAppDispatch } from '@/hooks';
 import { addItem } from '@/features/cart';
 import { addWishItem } from '@/features/wishlist';
+import { useState } from 'react';
 
 const ProductDetails = ({ product }: any) => {
     const dispatch = useAppDispatch();
+    // const [isAddedToCart, setIsAddedToCart] = useState(false);
 
     const handleAddToCart = () => {
         dispatch(addItem(product)); // Add item to cart
@@ -23,10 +24,6 @@ const ProductDetails = ({ product }: any) => {
                     <Box sx={{ display: "flex", flexDirection: 'column', alignItems: 'start', }}>
                         <Card sx={{ maxWidth: 506, boxShadow: 'none', borderRadius: '0', }}>
 
-                            {/* <Image src={'/assets/images/product-img-1.png '}
-                            alt="desc-image"
-                            width={506}
-                            height={450} /> */}
 
                             <CardMedia
                                 component="img"
@@ -91,9 +88,7 @@ const ProductDetails = ({ product }: any) => {
 
                         </Box>
                         <Divider variant="middle" textAlign='center' component="div" sx={{ zIndex: '50px', opacity: "0.6" }} />
-                        {/* <Typography variant="h4" component="div" sx={{ fontSize: '14px', fontWeight: 400, color: '#737373', marginY: '30px' }} >
-                            Met minim Mollie non desert Alamo est sit cliquey dolor do met sent. RELIT official consequent door ENIM RELIT Mollie. Excitation venial consequent sent nostrum met.
-                        </Typography> */}
+
                         <Box sx={{ display: "flex", flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginTop: '100px' }}>
                             <IconButton sx={{ marginRight: '0 5px' }}>
                                 <CircleBlueIcon />
@@ -116,6 +111,7 @@ const ProductDetails = ({ product }: any) => {
                             <IconButton onClick={handleAddToCart}>
                                 <BasketIcon />
                             </IconButton>
+
                             <IconButton >
                                 <MoreIcon />
                             </IconButton>

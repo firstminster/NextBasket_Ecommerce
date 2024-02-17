@@ -24,7 +24,7 @@ const Home: FC<NextPage> = () => {
       <Services />
       <Posts />
       <Review />
-      {/* <CallToAction /> */}
+      <CallToAction />
       <Footer />
     </>
   </Layout>

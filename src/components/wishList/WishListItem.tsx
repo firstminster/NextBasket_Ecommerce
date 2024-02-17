@@ -15,44 +15,48 @@ const WishListItem = ({ product }: Props) => {
         dispatch(removeWishItem(id));
     };
 
-    return (<Box sx={{ display: 'flex', alignItems: 'start', justifyContent: 'start', padding: '10px', width: '350px' }}>
 
-        <Box sx={{ display: 'flex', alignItems: 'start', }}>
+    return (
+        <Box sx={{ display: 'flex', alignItems: 'start', justifyContent: 'start', padding: '10px', width: '350px' }}>
 
-            <Card sx={{ maxWidth: 50, boxShadow: 'none', borderRadius: '30', }}>
-                <CardMedia
-                    component="img"
-                    alt={product.title}
-                    height="50px"
-                    image={product.thumbnail}
-                />
-            </Card>
+            <Box sx={{ display: 'flex', alignItems: 'start', }}>
 
-            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'start', marginLeft: '5px' }}>
-                <Box sx={{ display: 'flex', alignItems: 'start', marginLeft: '5px' }}>
-                    <Typography variant="h6" component="div" sx={{ fontSize: '16px', fontWeight: '500', color: '#252B42', marginBottom: '0px' }}>
-                        {product.title}
-                    </Typography>
-                    {/* <Typography variant="h6" component="div" sx={{ fontSize: '16px', fontWeight: '500', color: '#252B42', marginLeft: '5px' }}>
+                <Card sx={{ maxWidth: 50, boxShadow: 'none', borderRadius: '30', }}>
+                    <CardMedia
+                        component="img"
+                        alt={product.title}
+                        height="50px"
+                        image={product.thumbnail}
+                    />
+                </Card>
+
+                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'start', marginLeft: '5px' }}>
+                    <Box sx={{ display: 'flex', alignItems: 'start', marginLeft: '5px' }}>
+                        <Typography variant="h6" component="div" sx={{ fontSize: '16px', fontWeight: '500', color: '#252B42', marginBottom: '0px' }}>
+                            {product.title}
+                        </Typography>
+                        {/* <Typography variant="h6" component="div" sx={{ fontSize: '16px', fontWeight: '500', color: '#252B42', marginLeft: '5px' }}>
                         x {product.quantity}
                     </Typography> */}
-                </Box>
-                <Box sx={{ display: 'flex', flexDirection: '', alignItems: 'start', marginLeft: '5px', }}>
-                    {/* <IconButton onClick={() => onIncreaseQuantity(product.id)} sx={{ marginLeft: '5px', }}>
+                    </Box>
+                    <Box sx={{ display: 'flex', flexDirection: '', alignItems: 'start', marginLeft: '5px', }}>
+                        {/* <IconButton onClick={() => onIncreaseQuantity(product.id)} sx={{ marginLeft: '5px', }}>
                         <PlusIcon sx={{ fontSize: '13px', }} />
                     </IconButton>
                     <IconButton onClick={() => onDecreaseQuantity(product.id)} sx={{ marginX: '5px' }}>
                         <MinusIcon sx={{ fontSize: '13px', }} />
                     </IconButton> */}
-                    <IconButton onClick={() => onRemoveItem(product.id)} sx={{ marginRight: '0 5px' }}>
-                        <DeleteIcon sx={{ fontSize: '13px', }} />
-                    </IconButton>
+                        <IconButton onClick={() => onRemoveItem(product.id)} sx={{ marginRight: '0 5px' }}>
+                            <DeleteIcon sx={{ fontSize: '13px', }} />
+                        </IconButton>
 
+                    </Box>
                 </Box>
-            </Box>
 
+            </Box>
         </Box>
-    </Box>
+
+
     )
 }
 

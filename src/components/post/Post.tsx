@@ -9,14 +9,16 @@ type Props = {
 const Post = ({ imageUrl }: Props) => {
     return (
         <Card sx={{ maxWidth: 348, borderRadius: '0', margin: { xs: '30px', lg: '0px' } }}>
-            <TagIcon style={{ position: 'relative', top: '60px', left: '20px' }} />
-            <CardMedia
-                component="img"
-                alt="green iguana"
-                height="140"
-                image={imageUrl}
-                sx={{ height: '300px' }}
-            />
+            <Box sx={{ position: 'relative', }}>
+                <TagIcon style={{ position: 'absolute', top: '20px', left: '20px' }} />
+                <CardMedia
+                    component="img"
+                    alt="green iguana"
+                    height="140"
+                    image={imageUrl}
+                    sx={{ height: '300px' }}
+                />
+            </Box>
             <CardContent sx={{ height: '306px', display: "flex", flexDirection: 'column', alignItems: '', justifyContent: '', paddingX: '25px' }} >
                 <Box sx={{ display: "flex", flexDirection: 'row', alignItems: 'center', justifyContent: '', marginBottom: '10px', marginTop: '25px' }}>
                     <Typography variant="h5" component="div" sx={{ fontSize: '12px', fontWeight: 400, marginRight: '15px', color: '#8EC2F2' }} >
