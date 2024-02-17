@@ -24,12 +24,12 @@ const persistConfig = {
     storage,
 };
 
-// const persistedReducer = persistReducer(persistConfig, admissionSlice);
+const persistedReducer = persistReducer(persistConfig, cartReducer);
 
 export const store: any = configureStore({
     reducer: {
         product: productReducer,
-        cart: cartReducer
+        cart: persistedReducer
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({

@@ -26,7 +26,7 @@ const OrderValue = () => {
 
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'start', justifyContent: '', padding: '20px' }}>
             <Typography variant="h6" component="div" sx={{ fontSize: '16px', fontWeight: '600', color: '#252B42', marginBottom: '10px' }}>
-                Order Value
+                Order Summary
             </Typography>
             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: '', marginBottom: '5px' }} >
                 <Typography variant="h6" component="div" sx={{ fontSize: '14px', fontWeight: '600', color: '#252B42', marginRight: '5px' }}>

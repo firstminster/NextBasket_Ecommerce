@@ -35,7 +35,6 @@ export const cartReducer = createReducer(initialState, builder => {
             state.cartItems.push({ ...action.payload, quantity: 1 });
         }
     }).addCase(increaseQuantity, (state, action) => {
-
         const item = state.cartItems.find((item) => item.id === action.payload);
         if (item && item.quantity !== undefined) {
             item.quantity++;
