@@ -10,14 +10,6 @@ interface CartState {
     cartItems: any[];
 }
 
-interface IncreaseQuantityPayload {
-    id: number;
-}
-
-interface DecreaseQuantityPayload {
-    id: number;
-}
-
 const initialState: CartState = {
     cartItems: [],
 };

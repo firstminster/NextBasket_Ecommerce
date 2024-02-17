@@ -1,5 +1,6 @@
 import {
     Action,
+    combineReducers,
     configureStore,
     ThunkAction,
 } from '@reduxjs/toolkit';
@@ -17,6 +18,7 @@ import storage from "redux-persist/lib/storage";
 import { productReducer } from './features/product';
 import productSlice from './features/productSlice';
 import { cartReducer } from './features/cart';
+import { wishReducer } from './features/wishlist';
 
 
 const persistConfig = {
@@ -24,13 +26,18 @@ const persistConfig = {
     storage,
 };
 
-const persistedReducer = persistReducer(persistConfig, cartReducer);
+const rootReducer = combineReducers({
+    product: productReducer,
+    cart: cartReducer,
+    wishList: wishReducer
+})
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+
 
 export const store: any = configureStore({
-    reducer: {
-        product: productReducer,
-        cart: persistedReducer
-    },
+    reducer: persistedReducer
+    ,
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({
             serializableCheck: {
@@ -50,3 +57,5 @@ export type AppThunk<ReturnType = void> = ThunkAction<
     unknown,
     Action<string>
 >;
+
+

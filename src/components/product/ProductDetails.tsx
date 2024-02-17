@@ -3,12 +3,17 @@ import Image from 'next/image'
 import { ArrowLeftv3Icon, ArrowRightv3Icon, BasketIcon, CircleBlackIcon, CircleBlueIcon, CircleGreenIcon, CircleOrangeIcon, LikeIcon, MoreIcon, StarEmptyIcon, StarFilledIcon } from '../../../public/assets'
 import { useAppDispatch } from '@/hooks';
 import { addItem } from '@/features/cart';
+import { addWishItem } from '@/features/wishlist';
 
 const ProductDetails = ({ product }: any) => {
     const dispatch = useAppDispatch();
 
     const handleAddToCart = () => {
         dispatch(addItem(product)); // Add item to cart
+        // setIsAddedToCart(true); // Update button state
+    };
+    const handleAddToWishList = () => {
+        dispatch(addWishItem(product)); // Add item to wishList
         // setIsAddedToCart(true); // Update button state
     };
     return (
@@ -105,7 +110,7 @@ const ProductDetails = ({ product }: any) => {
                         </Box>
                         <Box sx={{ display: "flex", flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginY: '50px' }}>
                             <Button variant="contained" sx={{ height: '44px', width: '148px', fontSize: '12px', fontWeight: 700, backgroundColor: '#23A6F0', }} >Select Options</Button>
-                            <IconButton sx={{ margin: '0 0 0 10px' }}>
+                            <IconButton onClick={handleAddToWishList} sx={{ margin: '0 0 0 10px' }}>
                                 <LikeIcon />
                             </IconButton>
                             <IconButton onClick={handleAddToCart}>

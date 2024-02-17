@@ -1,4 +1,5 @@
 
+import { removeWishItem } from '@/features/wishlist';
 import { useAppDispatch } from '@/hooks';
 import { Box, Card, CardMedia, IconButton, Typography } from '@mui/material'
 import { createSvgIcon } from '@mui/material/utils';
@@ -8,9 +9,10 @@ type Props = {
 }
 
 const WishListItem = ({ product }: Props) => {
+    const dispatch = useAppDispatch();
 
     const onRemoveItem = (id: any) => {
-        // dispatch(removeItem(id));
+        dispatch(removeWishItem(id));
     };
 
     return (<Box sx={{ display: 'flex', alignItems: 'start', justifyContent: 'start', padding: '10px', width: '350px' }}>

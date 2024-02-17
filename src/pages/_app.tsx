@@ -22,7 +22,7 @@ export default function App(props: MyAppProps) {
   // If there's no emotionCache rendered by the server, use the clientSideEmotionCache
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   return <Provider store={store}>
-    <PersistGate persistor={persistor}>
+    <PersistGate loading={null} persistor={persistor}>
       <CacheProvider value={emotionCache}>
         <Head>
           <meta name="viewport" content="initial-scale=1, width=device-width" />

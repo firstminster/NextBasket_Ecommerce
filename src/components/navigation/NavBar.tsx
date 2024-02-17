@@ -7,6 +7,7 @@ import Carts from '../cart/Carts';
 import { cartSelector } from '@/features/cart';
 import { useAppSelector } from '@/hooks';
 import WishLists from '../wishList/WishLists';
+import { wishListSelector } from '@/features/wishlist';
 
 
 
@@ -14,6 +15,9 @@ const NavBar = () => {
     const {
         cartItems
     } = useAppSelector(cartSelector);
+    const {
+        wishItems
+    } = useAppSelector(wishListSelector);
 
     const getQuantity = () => {
         let quantity = 0;
@@ -22,6 +26,8 @@ const NavBar = () => {
     };
 
     const cartCount = getQuantity();
+
+    const wishCount = wishItems.length
 
 
     const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null);
@@ -194,7 +200,7 @@ const NavBar = () => {
 
 
                         <IconButton onClick={handleHeartClick} sx={{ color: '#23A6F0', fontWeight: '400', fontSize: '12px', }}>
-                            <HeartIcon style={{ margin: '5px' }} /> 1
+                            <HeartIcon style={{ margin: '5px' }} /> {wishCount}
                         </IconButton>
                         <Popover
                             id={idHeart}
