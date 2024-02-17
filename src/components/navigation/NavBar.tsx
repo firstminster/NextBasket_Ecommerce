@@ -4,10 +4,25 @@ import * as React from 'react';
 import { ArrowDownIcon, CartIcon, HeartIcon, MagnifierIcon, PhoneIcon, UserIcon, MailIcon, InstagramIcon, YoutubeIcon, FacebookIcon, TwitterIcon } from '../../../public/assets'
 import { AppBar, Box, Container, IconButton, List, ListItem, ListItemButton, ListItemText, Tab, Tabs, Toolbar, Typography, Popover, Button } from '@mui/material';
 import Carts from '../cart/Carts';
+import { cartSelector } from '@/features/cart';
+import { useAppSelector } from '@/hooks';
 
 
 
 const NavBar = () => {
+    const {
+        cartItems
+    } = useAppSelector(cartSelector);
+
+    const getQuantity = () => {
+        let quantity = 0;
+        cartItems.forEach((item: { quantity: number; }) => (quantity += item.quantity));
+        return quantity;
+    };
+
+    const cartCount = getQuantity();
+
+
     const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null);
 
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -150,7 +165,7 @@ const NavBar = () => {
                         <>
 
                             <IconButton onClick={handleClick} sx={{ marginRight: '30px', color: '#23A6F0', fontWeight: '400', fontSize: '12px', }}>
-                                <CartIcon style={{ margin: '5px' }} /> 1
+                                <CartIcon style={{ margin: '5px' }} /> {cartCount}
                             </IconButton>
                             <Popover
                                 id={id}
@@ -161,6 +176,7 @@ const NavBar = () => {
                                     vertical: 'bottom',
                                     horizontal: 'left',
                                 }}
+                                sx={{ maxWidth: '100%' }}
                             >
                                 <Carts />
                             </Popover>

@@ -12,9 +12,9 @@ const Carts = () => {
 
     console.log(cartItems);
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: '', padding: '20px' }}>
             {cartItems?.map((item: any) => (
-                <CartItem product={item} />
+                <CartItem key={item.id} product={item} />
             ))}
 
             <OrderValue />
