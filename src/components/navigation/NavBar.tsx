@@ -61,7 +61,7 @@ const NavBar = () => {
                                 fontSize: '14px',
                             }}> Home </Link>
 
-                            <Link href='/shop' style={{
+                            <Link href='/:id' style={{
                                 textDecoration: "none",
                                 color: "#737373",
                                 fontSize: '14px',

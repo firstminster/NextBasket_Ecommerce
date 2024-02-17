@@ -14,24 +14,13 @@ import { getAllproducts, productSelector } from "@/features/product";
 // const montserrat = Montserrat({ subsets: ["latin"] });
 
 const Home: FC<NextPage> = () => {
-  const dispatch = useAppDispatch();
-  const {
-    products,
-    pending,
-    error,
-  } = useAppSelector(productSelector);
 
-  // console.log(products);
-
-  useEffect(() => {
-    dispatch(getAllproducts())
-  }, [])
 
   return (<Layout title="NextBasket" keywords="Home" description="Shop at your convenience" >
     <>
       <NavBar />
       <Header />
-      <FeaturedProducts products={products} />
+      <FeaturedProducts />
       <Services />
       <Posts />
       <Review />

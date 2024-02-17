@@ -2,24 +2,27 @@ import { Box, Card, CardContent, CardMedia, Typography } from '@mui/material'
 import React from 'react'
 
 type ProductProps = {
+    id: number;
     title: string;
     category: string;
     thumbnail?: string;
-    price: number
-    discountPercentage: number
+    price: number;
+    discountPercentage: number;
+    handleProductClick: any;
 }
 
-const Product = ({ title, category, thumbnail, price, discountPercentage }: ProductProps) => {
-    return (
-        <Card sx={{ maxWidth: 183, boxShadow: 'none', borderRadius: '0', margin: '20px' }}>
+const Product = ({ id, title, category, thumbnail, price, discountPercentage, handleProductClick }: ProductProps) => {
+    return (<Box >
+        <Card sx={{ maxWidth: 183, boxShadow: 'none', borderRadius: '0', margin: '20px', cursor: 'pointer' }}>
             <CardMedia
+                onClick={() => handleProductClick(id)}
                 component="img"
                 alt="green iguana"
                 height="140"
                 image={thumbnail}
                 sx={{ height: '238px' }}
             />
-            <CardContent sx={{ height: '162px', display: "flex", flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }} >
+            <CardContent onClick={() => handleProductClick(id)} sx={{ height: '162px', display: "flex", flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }} >
                 <Typography variant="h5" component="div" sx={{ fontSize: '16px', fontWeight: 700, color: '#252B42' }} >
                     {title}
                 </Typography>
@@ -36,6 +39,7 @@ const Product = ({ title, category, thumbnail, price, discountPercentage }: Prod
                 </Box>
             </CardContent>
         </Card>
+    </Box>
     )
 }
 

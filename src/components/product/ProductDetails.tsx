@@ -1,22 +1,46 @@
-import { Avatar, Box, Button, Container, Divider, IconButton, Typography } from '@mui/material'
+import { Avatar, Box, Button, Card, CardMedia, Container, Divider, IconButton, Typography } from '@mui/material'
 import Image from 'next/image'
 import { ArrowLeftv3Icon, ArrowRightv3Icon, BasketIcon, CircleBlackIcon, CircleBlueIcon, CircleGreenIcon, CircleOrangeIcon, LikeIcon, MoreIcon, StarEmptyIcon, StarFilledIcon } from '../../../public/assets'
 
-const ProductDetails = () => {
+const ProductDetails = ({ product }: any) => {
     return (
         <Box sx={{ backgroundColor: '#FAFAFA', paddingBottom: '50px' }}>
             <Container maxWidth="lg" sx={{}} >
                 <Box sx={{ display: "flex", alignItems: 'start', justifyContent: '', marginY: '0px' }}>
                     <Box sx={{ display: "flex", flexDirection: 'column', alignItems: 'start', }}>
+                        <Card sx={{ maxWidth: 506, boxShadow: 'none', borderRadius: '0', }}>
 
-                        <Image src='/assets/images/product-img-1.png '
+                            {/* <Image src={'/assets/images/product-img-1.png '}
                             alt="desc-image"
                             width={506}
-                            height={450} />
+                            height={450} /> */}
+
+                            <CardMedia
+                                component="img"
+                                alt={product.title}
+                                height="450px"
+                                image={product.thumbnail}
+                            />
+                        </Card>
 
 
                         <Box sx={{ display: "flex", alignItems: 'center', justifyContent: 'space-between', marginTop: '21px' }}>
-                            <Image src='/assets/images/product-img-2.png '
+                            {
+                                product?.images.map((item: any, idx: number) => {
+                                    return (
+                                        <Card key={idx} sx={{ maxWidth: 100, boxShadow: 'none', borderRadius: '0', }}>
+                                            <CardMedia
+                                                component="img"
+                                                alt={item}
+                                                height="75"
+                                                image={item}
+                                            />
+
+                                        </Card>
+                                    )
+                                })
+                            }
+                            {/* <Image src='/assets/images/product-img-2.png '
                                 alt="desc-image"
                                 width={100}
                                 height={75} />
@@ -24,7 +48,7 @@ const ProductDetails = () => {
                             <Image src='/assets/images/product-img-3.png '
                                 alt="desc-image"
                                 width={100}
-                                height={75} style={{ marginLeft: '19px' }} />
+                                height={75} style={{ marginLeft: '19px' }} /> */}
 
                         </Box>
                     </Box>
@@ -34,7 +58,7 @@ const ProductDetails = () => {
 
                     <Box sx={{ display: "flex", flexDirection: 'column', alignItems: 'start', justifyContent: '', marginLeft: '100px' }}>
                         <Typography variant="h4" component="div" sx={{ fontSize: '20px', fontWeight: 400, color: '#252B42' }} >
-                            Floating Phone
+                            {product.title}
                         </Typography>
                         <Box sx={{ display: "flex", flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginY: '20px' }}>
                             <StarFilledIcon style={{ marginRight: '5px' }} />
@@ -43,18 +67,18 @@ const ProductDetails = () => {
                             <StarFilledIcon style={{ marginRight: '5px' }} />
                             <StarEmptyIcon />
                             <Typography variant="h6" component="div" sx={{ fontSize: '14px', fontWeight: 700, color: '#737373', marginLeft: '10px' }} >
-                                10 Reviews
+                                {product.rating} Reviews
                             </Typography>
                         </Box>
                         <Typography variant="h4" component="div" sx={{ fontSize: '24px', fontWeight: 700, color: '#252B42', marginY: '20px' }} >
-                            $1,139.33
+                            ${product.price}
                         </Typography>
                         <Box sx={{ display: "flex", alignItems: 'center', justifyContent: 'center', }}>
                             <Typography variant="h6" component="div" sx={{ fontSize: '14px', fontWeight: 700, color: '#737373', }} >
                                 Availability :
                             </Typography>
                             <Typography variant="h4" component="div" sx={{ fontSize: '14px', fontWeight: 700, color: '#23A6F0', marginLeft: '5px' }} >
-                                In Stock
+                                {product.stock > 0 ? 'In Stock' : 'Out of Stock'}
                             </Typography>
 
 

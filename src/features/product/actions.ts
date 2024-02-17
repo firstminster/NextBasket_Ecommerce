@@ -15,3 +15,18 @@ export const getAllproducts = createAsyncThunk(
         }
     }
 );
+
+//  Handle GET request for a single product
+export const getProduct = createAsyncThunk(
+    "product/getProduct",
+    async (id: string) => {
+        try {
+            const response = await http.get(`products/${id}`);
+            console.log(response.data);
+            return response.data;
+        } catch (error: any) {
+            console.log(error);
+            // return thunkAPI.rejectWithValue(error.message);
+        }
+    }
+);
