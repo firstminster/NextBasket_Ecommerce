@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import http from "../../../utils/requestMethod";
+import http from "../../utils/requestMethod";
 import { AsyncThunkAction, AsyncThunkConfig } from "@reduxjs/toolkit/dist/createAsyncThunk";
 
 export const initialState = {
@@ -12,16 +12,16 @@ export const initialState = {
 
 
 //  Handle GET request for all products
-export const getAllproducts = createAsyncThunk<any, void, AsyncThunkConfig>(
+export const getAllproducts = createAsyncThunk(
     "product/getAllproducts",
-    async (thunkAPI: any) => {
+    async () => {
         try {
             const response = await http.get("/products");
             console.log(response);
             return response.data;
         } catch (error: any) {
             console.log(error);
-            return thunkAPI.rejectWithValue(error.message);
+            // return thunkAPI.rejectWithValue(error.message);
         }
     }
 );

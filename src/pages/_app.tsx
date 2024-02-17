@@ -6,7 +6,7 @@ import { CacheProvider, EmotionCache } from "@emotion/react";
 import createEmotionCache from "../../utils/createEmotionCache";
 import defaultTheme from "../../utils/defaultTheme";
 import { Provider } from "react-redux";
-import { persistor, store } from "../redux/store";
+import { persistor, store } from "../store";
 // import "@/styles/globals.css";
 
 // Client-side cache, shared for the whole session of the user in the browser.
