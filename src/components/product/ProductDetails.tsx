@@ -1,8 +1,16 @@
 import { Avatar, Box, Button, Card, CardMedia, Container, Divider, IconButton, Typography } from '@mui/material'
 import Image from 'next/image'
 import { ArrowLeftv3Icon, ArrowRightv3Icon, BasketIcon, CircleBlackIcon, CircleBlueIcon, CircleGreenIcon, CircleOrangeIcon, LikeIcon, MoreIcon, StarEmptyIcon, StarFilledIcon } from '../../../public/assets'
+import { useAppDispatch } from '@/hooks';
+import { addItem } from '@/features/cart';
 
 const ProductDetails = ({ product }: any) => {
+    const dispatch = useAppDispatch();
+
+    const handleAddToCart = () => {
+        dispatch(addItem(product)); // Add item to cart
+        // setIsAddedToCart(true); // Update button state
+    };
     return (
         <Box sx={{ backgroundColor: '#FAFAFA', paddingBottom: '50px' }}>
             <Container maxWidth="lg" sx={{}} >
@@ -93,7 +101,6 @@ const ProductDetails = ({ product }: any) => {
                             </IconButton>
                             <IconButton sx={{ marginRight: '0 5px' }}>
                                 <CircleGreenIcon />
-
                             </IconButton>
                             <IconButton sx={{ marginRight: '0 5px' }}>
                                 <CircleOrangeIcon />
@@ -107,7 +114,7 @@ const ProductDetails = ({ product }: any) => {
                             <IconButton sx={{ margin: '0 0 0 10px' }}>
                                 <LikeIcon />
                             </IconButton>
-                            <IconButton >
+                            <IconButton onClick={handleAddToCart}>
                                 <BasketIcon />
                             </IconButton>
                             <IconButton >
