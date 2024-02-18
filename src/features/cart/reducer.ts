@@ -5,9 +5,10 @@ import {
     increaseQuantity,
     removeItem,
 } from './actions';
+import { CartProduct } from '@/types';
 
 interface CartState {
-    cartItems: any[];
+    cartItems: CartProduct[];
 }
 
 const initialState: CartState = {

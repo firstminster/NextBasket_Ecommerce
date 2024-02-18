@@ -1,8 +1,9 @@
 import { createReducer } from '@reduxjs/toolkit';
 import { getAllproducts, getProduct } from './actions';
+import Product from '@/types';
 
 type ProductState = {
-    products: any[];
+    products: Product[];
     product: any;
     pending: boolean;
     error: boolean;

@@ -1,7 +1,7 @@
 
 import { FC, } from "react";
 import type { NextPage } from "next";
-import { CallToAction, Footer, Header, Layout, NavBar, NavTop, Posts, FeaturedProducts, Review, Services } from "@/components";
+import { CallToAction, Footer, Header, Layout, NavBar, Posts, FeaturedProducts, Review, Services } from "@/components";
 
 import styles from "@/styles/Home.module.css";
 

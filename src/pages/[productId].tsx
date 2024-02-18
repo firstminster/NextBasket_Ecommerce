@@ -16,8 +16,6 @@ const shop = () => {
         error,
     } = useAppSelector(productSelector);
 
-    console.log(productId);
-    console.log(product);
 
     useEffect(() => {
         if (productId && typeof productId === 'string') {

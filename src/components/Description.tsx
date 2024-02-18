@@ -13,7 +13,7 @@ const Description = () => {
                     Additional Information
                 </Typography>
                 <Typography variant="h3" component="div" sx={{ fontSize: '14px', fontWeight: '700', color: '#737373' }}>
-                    Reviews <span>(0)</span>
+                    Reviews <span style={{ color: '#23856D' }}>(0)</span>
                 </Typography>
             </Box>
             <Divider variant="middle" component="div" />
@@ -37,7 +37,7 @@ const Description = () => {
                     </Typography>
                 </Box>
                 <Box sx={{ display: "flex", alignItems: 'center', }}>
-                    <Image src='/assets/images/desc-image.png '
+                    <Image src='/assets/images/desc-image.png'
                         style={{ width: '100%' }}
                         alt="desc-image"
                         width={413}

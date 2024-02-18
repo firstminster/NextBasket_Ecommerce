@@ -1,6 +1,6 @@
 import { Layout } from './layout'
 import NavBar from './navigation/NavBar'
-import NavTop from './navigation/NavTop'
+
 import NavPath from './navigation/NavPath'
 import Header from './Header'
 import FeaturedProducts from './product/FeaturedProducts'
@@ -18,5 +18,5 @@ import Footer from './Footer'
 
 
 export {
-    Layout, NavBar, NavTop, NavPath, Header, FeaturedProducts, BestsellerProducts, Services, Posts, Review, CallToAction, ProductDetails, Description, Sponsor, Carts, WishLists, Footer
+    Layout, NavBar, NavPath, Header, FeaturedProducts, BestsellerProducts, Services, Posts, Review, CallToAction, ProductDetails, Description, Sponsor, Carts, WishLists, Footer
 }

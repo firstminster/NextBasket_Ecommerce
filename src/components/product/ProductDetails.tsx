@@ -1,27 +1,54 @@
-import { useState, } from 'react';
-import { Avatar, Box, Button, Card, CardMedia, Container, Divider, IconButton, Typography } from '@mui/material'
+import React, { useState } from 'react';
+import { Avatar, Box, Button, Card, CardMedia, Container, Divider, IconButton, Snackbar, Typography } from '@mui/material'
 import { BasketIcon, CircleBlackIcon, CircleBlueIcon, CircleGreenIcon, CircleOrangeIcon, LikeIcon, MoreIcon, StarEmptyIcon, StarFilledIcon } from '../../../public/assets'
 import { useAppDispatch, } from '@/hooks';
 import { addItem } from '@/features/cart';
 import { addWishItem } from '@/features/wishlist';
+import Product from './Product';
+import CloseIcon from '@mui/icons-material/Close';
 
 
 const ProductDetails = ({ product }: any) => {
     const dispatch = useAppDispatch();
     // const [isAddedToCart, setIsAddedToCart] = useState(false);
+    const [open, setOpen] = useState(false);
 
 
 
     const handleAddToCart = () => {
         dispatch(addItem(product)); // Add item to cart
+        setOpen(true);
         // setIsAddedToCart(true); // Update button state
     };
     const handleAddToWishList = () => {
         dispatch(addWishItem(product)); // Add item to wishList
+        setOpen(true);
         // setIsAddedToCart(true); // Update button state
     };
 
+    const handleClose = (event: React.SyntheticEvent | Event, reason?: string) => {
+        if (reason === 'clickaway') {
+            return;
+        }
 
+        setOpen(false);
+    };
+
+    const action = (
+        <React.Fragment>
+            {/* <Button color="secondary" size="small" onClick={handleClose}>
+            UNDO
+          </Button> */}
+            <IconButton
+                size="small"
+                aria-label="close"
+                color="inherit"
+                onClick={handleClose}
+            >
+                <CloseIcon fontSize="small" />
+            </IconButton>
+        </React.Fragment>
+    );
 
     return (
         <Box sx={{ backgroundColor: '#FAFAFA', paddingBottom: '50px' }}>
@@ -117,13 +144,19 @@ const ProductDetails = ({ product }: any) => {
                             <IconButton onClick={handleAddToCart}>
                                 <BasketIcon />
                             </IconButton>
+                            <Snackbar
+                                anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                                open={open}
+                                autoHideDuration={2000}
+                                onClose={handleClose}
+                                message="Added an item"
+                                action={action}
+
+                            />
 
                             <IconButton >
                                 <MoreIcon />
                             </IconButton>
-
-
-
 
                         </Box>
                     </Box>
