@@ -1,13 +1,16 @@
+import { useState, } from 'react';
 import { Avatar, Box, Button, Card, CardMedia, Container, Divider, IconButton, Typography } from '@mui/material'
 import { BasketIcon, CircleBlackIcon, CircleBlueIcon, CircleGreenIcon, CircleOrangeIcon, LikeIcon, MoreIcon, StarEmptyIcon, StarFilledIcon } from '../../../public/assets'
-import { useAppDispatch } from '@/hooks';
+import { useAppDispatch, } from '@/hooks';
 import { addItem } from '@/features/cart';
 import { addWishItem } from '@/features/wishlist';
-import { useState } from 'react';
+
 
 const ProductDetails = ({ product }: any) => {
     const dispatch = useAppDispatch();
     // const [isAddedToCart, setIsAddedToCart] = useState(false);
+
+
 
     const handleAddToCart = () => {
         dispatch(addItem(product)); // Add item to cart
@@ -17,6 +20,9 @@ const ProductDetails = ({ product }: any) => {
         dispatch(addWishItem(product)); // Add item to wishList
         // setIsAddedToCart(true); // Update button state
     };
+
+
+
     return (
         <Box sx={{ backgroundColor: '#FAFAFA', paddingBottom: '50px' }}>
             <Container maxWidth="lg" sx={{}} >
@@ -52,7 +58,6 @@ const ProductDetails = ({ product }: any) => {
 
                         </Box>
                     </Box>
-
 
 
                     <Box sx={{ display: "flex", flexDirection: 'column', alignItems: 'start', justifyContent: '', marginLeft: { xs: '20px', md: '100px' }, marginTop: { xs: '41px', md: '0px' } }}>

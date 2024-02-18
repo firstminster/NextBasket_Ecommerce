@@ -1,4 +1,4 @@
-import { Description, Footer, Layout, NavBar, NavPath, ProductDetails, Sponsor } from '@/components'
+import { BestsellerProducts, Description, Footer, Layout, NavBar, NavPath, ProductDetails, Sponsor } from '@/components'
 import { getProduct, productSelector } from '@/features/product';
 import { useAppDispatch, useAppSelector } from '@/hooks';
 import { useRouter } from 'next/router';
@@ -37,6 +37,7 @@ const shop = () => {
             <NavPath activePath='Shop' />
             <ProductDetails product={product} />
             <Description />
+            <BestsellerProducts />
             <Sponsor />
             <Footer />
         </>

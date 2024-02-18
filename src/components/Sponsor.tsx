@@ -3,15 +3,24 @@ import { AwsIcon, BingoIcon, BirdIcon, HooliIcon, LyftIcon, StripeIcon } from '.
 
 
 const Sponsor = () => {
-    return (<Box sx={{ marginBottom: '56px', backgroundColor: '#FAFAFA', marginTop: '98px', paddingY: '50px' }}>
+    return (<Box sx={{ marginBottom: '0px', backgroundColor: '#FAFAFA', marginTop: '98px', paddingY: '50px' }}>
         <Container maxWidth="lg" sx={{}} >
             <Box sx={{ display: "flex", flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', justifyContent: 'space-between', }}>
                 <HooliIcon />
-                <LyftIcon />
+                <Box sx={{ marginY: { xs: '60px', md: '0px' } }}>
+
+                    <LyftIcon />
+                </Box>
                 <BirdIcon />
-                <StripeIcon />
+                <Box sx={{ marginY: { xs: '60px', md: '0px' } }}>
+                    <StripeIcon />
+
+                </Box>
                 <AwsIcon />
-                <BingoIcon />
+                <Box sx={{ marginTop: { xs: '60px', md: '0px' } }}>
+
+                    <BingoIcon />
+                </Box>
             </Box>
         </Container>
     </Box>

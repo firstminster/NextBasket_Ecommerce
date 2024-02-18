@@ -9,13 +9,14 @@ import { useRouter } from "next/router";
 const FeaturedProducts = () => {
     const dispatch = useAppDispatch();
     const router = useRouter();
+    const [displayedCount, setDisplayedCount] = useState(10); // Initial number of displayed items
+
     const {
         products,
         pending,
         error,
     } = useAppSelector(productSelector);
 
-    const [displayedCount, setDisplayedCount] = useState(10); // Initial number of displayed items
 
     const loadMoreProducts = () => {
         setDisplayedCount(prevCount => prevCount + 10); // Load 10 more items

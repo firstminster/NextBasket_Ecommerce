@@ -9,7 +9,7 @@ const Description = () => {
                 <Typography variant="h3" component="div" sx={{ fontSize: '14px', fontWeight: '600', color: '#737373', marginY: '34px' }}>
                     Description
                 </Typography>
-                <Typography variant="h3" component="div" sx={{ fontSize: '14px', fontWeight: '700', marginX: '48px', color: '#737373' }}>
+                <Typography variant="h3" component="div" sx={{ fontSize: '14px', fontWeight: '700', marginX: { xs: '20px', md: '48px' }, color: '#737373' }}>
                     Additional Information
                 </Typography>
                 <Typography variant="h3" component="div" sx={{ fontSize: '14px', fontWeight: '700', color: '#737373' }}>
@@ -18,26 +18,27 @@ const Description = () => {
             </Box>
             <Divider variant="middle" component="div" />
 
-            <Box sx={{ display: "flex", alignItems: 'start', justifyContent: 'center', marginY: '41px' }}>
+            <Box sx={{ display: "flex", flexDirection: { xs: 'column', md: 'row' }, alignItems: 'start', justifyContent: 'center', marginY: '41px' }}>
                 <Box sx={{ display: "flex", flexDirection: 'column', alignItems: 'start', justifyContent: '', marginRight: '100px' }}>
                     <Typography variant="h4" component="div" sx={{ fontSize: '24px', fontWeight: 700, color: '#252B42' }} >
                         the quick fox jumps over
                     </Typography>
-                    <Typography variant="h4" component="div" sx={{ fontSize: '14px', fontWeight: 400, color: '#737373', width: '513px', marginY: '30px' }} >
+                    <Typography variant="h4" component="div" sx={{ fontSize: '14px', fontWeight: 400, color: '#737373', width: { xs: '300px', md: '513px' }, marginY: '30px' }} >
                         Met minim Mollie non desert Alamo est sit cliquey dolor do met sent. RELIT official consequent door ENIM RELIT Mollie. Excitation venial consequent sent nostrum met.
                     </Typography>
                     <Box sx={{ display: "flex", alignItems: 'center', justifyContent: 'center', }}>
                         <GreenLineIcon style={{ marginRight: '24px' }} />
-                        <Typography variant="h4" component="div" sx={{ fontSize: '14px', fontWeight: 400, color: '#737373', width: '480px' }} >
+                        <Typography variant="h4" component="div" sx={{ fontSize: '14px', fontWeight: 400, color: '#737373', width: { xs: '300px', md: '480px' } }} >
                             Met minim Mollie non desert Alamo est sit cliquey dolor do met sent. RELIT official consequent door ENIM RELIT Mollie. Excitation venial consequent sent nostrum met.
                         </Typography>
                     </Box>
-                    <Typography variant="h4" component="div" sx={{ fontSize: '14px', fontWeight: 400, color: '#737373', width: '513px', marginY: '30px' }} >
+                    <Typography variant="h4" component="div" sx={{ fontSize: '14px', fontWeight: 400, color: '#737373', width: { xs: '300px', md: '513px' }, marginY: '30px' }} >
                         Met minim Mollie non desert Alamo est sit cliquey dolor do met sent. RELIT official consequent door ENIM RELIT Mollie. Excitation venial consequent sent nostrum met.
                     </Typography>
                 </Box>
                 <Box sx={{ display: "flex", alignItems: 'center', }}>
                     <Image src='/assets/images/desc-image.png '
+                        style={{ width: '100%' }}
                         alt="desc-image"
                         width={413}
                         height={372} />

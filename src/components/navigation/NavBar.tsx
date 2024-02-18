@@ -68,9 +68,9 @@ const NavBar = () => {
     };
 
     const theme = useTheme();
-    console.log(theme);
+
     const isMatch = useMediaQuery(theme.breakpoints.down("lg"));
-    console.log(isMatch);
+
     return (
         <AppBar position="sticky" sx={{ boxShadow: 'none', }}>
             <Toolbar disableGutters sx={{ backgroundColor: '#23856D', display: { xs: "none", lg: "flex" } }}>
