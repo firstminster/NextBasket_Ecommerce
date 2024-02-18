@@ -38,7 +38,8 @@ import CircleBlackIcon from './circle-black.svg'
 import BasketIcon from './basket.svg'
 import LikeIcon from './like.svg'
 import MoreIcon from './more.svg'
+import MenuIcon from './menu-bar.svg'
 
 export {
-    PhoneIcon, MailIcon, InstagramIcon, FacebookIcon, TwitterIcon, YoutubeIcon, ArrowDownIcon, UserIcon, MagnifierIcon, CartIcon, HeartIcon, BookReaderIcon, IndicatorIcon, CarbonBookIcon, AlarmIcon, AlbumIcon, ArrowRightIcon, ArrowRightv2Icon, ArrowRightv3Icon, ArrowLeftv3Icon, TagIcon, StarFilledIcon, StarEmptyIcon, Facebookv2Icon, Twitterv2Icon, Instagramv2Icon, GreenLineIcon, AwsIcon, BingoIcon, BirdIcon, LyftIcon, StripeIcon, HooliIcon, CircleBlueIcon, CircleGreenIcon, CircleOrangeIcon, CircleBlackIcon, BasketIcon, LikeIcon, MoreIcon
+    PhoneIcon, MailIcon, InstagramIcon, FacebookIcon, TwitterIcon, YoutubeIcon, ArrowDownIcon, UserIcon, MagnifierIcon, CartIcon, HeartIcon, BookReaderIcon, IndicatorIcon, CarbonBookIcon, AlarmIcon, AlbumIcon, ArrowRightIcon, ArrowRightv2Icon, ArrowRightv3Icon, ArrowLeftv3Icon, TagIcon, StarFilledIcon, StarEmptyIcon, Facebookv2Icon, Twitterv2Icon, Instagramv2Icon, GreenLineIcon, AwsIcon, BingoIcon, BirdIcon, LyftIcon, StripeIcon, HooliIcon, CircleBlueIcon, CircleGreenIcon, CircleOrangeIcon, CircleBlackIcon, BasketIcon, LikeIcon, MoreIcon, MenuIcon
 }

@@ -20,11 +20,9 @@ const ProductDetails = ({ product }: any) => {
     return (
         <Box sx={{ backgroundColor: '#FAFAFA', paddingBottom: '50px' }}>
             <Container maxWidth="lg" sx={{}} >
-                <Box sx={{ display: "flex", alignItems: 'start', justifyContent: '', marginY: '0px' }}>
+                <Box sx={{ display: "flex", flexDirection: { xs: 'column', md: 'row' }, alignItems: 'start', justifyContent: '', marginY: '0px' }}>
                     <Box sx={{ display: "flex", flexDirection: 'column', alignItems: 'start', }}>
                         <Card sx={{ maxWidth: 506, boxShadow: 'none', borderRadius: '0', }}>
-
-
                             <CardMedia
                                 component="img"
                                 alt={product.title}
@@ -38,7 +36,7 @@ const ProductDetails = ({ product }: any) => {
                             {
                                 product?.images.map((item: any, idx: number) => {
                                     return (
-                                        <Card key={idx} sx={{ maxWidth: 100, boxShadow: 'none', borderRadius: '0', }}>
+                                        <Card key={idx} sx={{ maxWidth: 100, boxShadow: 'none', borderRadius: '0', marginRight: '20px' }}>
                                             <CardMedia
                                                 component="img"
                                                 alt={item}
@@ -57,7 +55,7 @@ const ProductDetails = ({ product }: any) => {
 
 
 
-                    <Box sx={{ display: "flex", flexDirection: 'column', alignItems: 'start', justifyContent: '', marginLeft: '100px' }}>
+                    <Box sx={{ display: "flex", flexDirection: 'column', alignItems: 'start', justifyContent: '', marginLeft: { xs: '20px', md: '100px' }, marginTop: { xs: '41px', md: '0px' } }}>
                         <Typography variant="h4" component="div" sx={{ fontSize: '20px', fontWeight: 400, color: '#252B42' }} >
                             {product.title}
                         </Typography>
@@ -87,9 +85,12 @@ const ProductDetails = ({ product }: any) => {
 
 
                         </Box>
+                        <Typography variant="h6" component="div" sx={{ fontSize: '14px', fontWeight: 400, color: '#737373', marginTop: '32px' }} >
+                            {product.description}
+                        </Typography>
                         <Divider variant="middle" textAlign='center' component="div" sx={{ zIndex: '50px', opacity: "0.6" }} />
 
-                        <Box sx={{ display: "flex", flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginTop: '100px' }}>
+                        <Box sx={{ display: "flex", flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginTop: '60px' }}>
                             <IconButton sx={{ marginRight: '0 5px' }}>
                                 <CircleBlueIcon />
                             </IconButton>

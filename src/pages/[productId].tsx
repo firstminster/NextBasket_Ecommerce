@@ -34,7 +34,7 @@ const shop = () => {
     return (<Layout title="NextBasket" keywords="Home" description="Shop at your convenience" >
         <>
             <NavBar />
-            <NavPath activeHrefPath='/' activePath='Shop' />
+            <NavPath activePath='Shop' />
             <ProductDetails product={product} />
             <Description />
             <Sponsor />

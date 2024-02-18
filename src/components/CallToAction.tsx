@@ -4,10 +4,9 @@ import Image from 'next/image'
 
 const CallToAction = () => {
     return (
-
         <Box >
-
-            <img src="/assets/images/cta-banner.png" alt="cta-banner" style={{ width: '100%', height: '640px', objectFit: 'cover' }} />
+            <Image src="/assets/images/cta-banner.png" alt="cta-banner" style={{ width: '100%', height: '640px', objectFit: 'cover' }} width={100}
+                height={100} loading="lazy" />
 
             <Container maxWidth="lg" sx={{ marginTop: '0px', }} >
                 <Box sx={{ position: 'relative', display: "flex", flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginRight: { xs: '0px', lg: '0px' }, }}>
