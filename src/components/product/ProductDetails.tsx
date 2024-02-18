@@ -1,44 +1,48 @@
 import React, { useState } from 'react';
-import { Avatar, Box, Button, Card, CardMedia, Container, Divider, IconButton, Snackbar, Typography } from '@mui/material'
+import { Box, Button, Card, CardMedia, Container, Divider, IconButton, Snackbar, Typography } from '@mui/material'
 import { BasketIcon, CircleBlackIcon, CircleBlueIcon, CircleGreenIcon, CircleOrangeIcon, LikeIcon, MoreIcon, StarEmptyIcon, StarFilledIcon } from '../../../public/assets'
-import { useAppDispatch, } from '@/hooks';
-import { addItem } from '@/features/cart';
-import { addWishItem } from '@/features/wishlist';
-import Product from './Product';
+import { useAppDispatch, useAppSelector, } from '@/hooks';
+import { addItem, cartSelector } from '@/features/cart';
+import { addWishItem, wishListSelector } from '@/features/wishlist';
 import CloseIcon from '@mui/icons-material/Close';
 
 
 const ProductDetails = ({ product }: any) => {
     const dispatch = useAppDispatch();
-    // const [isAddedToCart, setIsAddedToCart] = useState(false);
     const [open, setOpen] = useState(false);
 
+    const {
+        cartItems
+    } = useAppSelector(cartSelector);
 
+    const {
+        wishItems
+    } = useAppSelector(wishListSelector);
 
     const handleAddToCart = () => {
         dispatch(addItem(product)); // Add item to cart
         setOpen(true);
-        // setIsAddedToCart(true); // Update button state
+
     };
     const handleAddToWishList = () => {
         dispatch(addWishItem(product)); // Add item to wishList
         setOpen(true);
-        // setIsAddedToCart(true); // Update button state
     };
+
+    // checks if there is any item in the cart or wishList
+    const isItemInCart = cartItems.some((item: { id: any; }) => item.id === product.id);
+    const isItemInWish = wishItems.some((item: { id: any; }) => item.id === product.id);
+
 
     const handleClose = (event: React.SyntheticEvent | Event, reason?: string) => {
         if (reason === 'clickaway') {
             return;
         }
-
         setOpen(false);
     };
 
     const action = (
         <React.Fragment>
-            {/* <Button color="secondary" size="small" onClick={handleClose}>
-            UNDO
-          </Button> */}
             <IconButton
                 size="small"
                 aria-label="close"
@@ -138,10 +142,10 @@ const ProductDetails = ({ product }: any) => {
                         </Box>
                         <Box sx={{ display: "flex", flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginY: '50px' }}>
                             <Button variant="contained" sx={{ height: '44px', width: '148px', fontSize: '12px', fontWeight: 700, backgroundColor: '#23A6F0', }} >Select Options</Button>
-                            <IconButton onClick={handleAddToWishList} sx={{ margin: '0 0 0 10px' }}>
+                            <IconButton disabled={isItemInWish} onClick={handleAddToWishList} sx={{ margin: '0 0 0 10px' }}>
                                 <LikeIcon />
                             </IconButton>
-                            <IconButton onClick={handleAddToCart}>
+                            <IconButton disabled={isItemInCart} onClick={handleAddToCart}>
                                 <BasketIcon />
                             </IconButton>
                             <Snackbar

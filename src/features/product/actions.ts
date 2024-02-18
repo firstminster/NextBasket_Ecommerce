@@ -7,7 +7,6 @@ export const getAllproducts = createAsyncThunk(
     async () => {
         try {
             const response = await http.get("products?limit=0");
-            console.log(response.data);
             return response.data.products;
         } catch (error: any) {
             console.log(error);
@@ -22,7 +21,6 @@ export const getProduct = createAsyncThunk(
     async (id: string) => {
         try {
             const response = await http.get(`products/${id}`);
-            console.log(response.data);
             return response.data;
         } catch (error: any) {
             console.log(error);
