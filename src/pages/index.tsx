@@ -1,4 +1,3 @@
-
 import { FC, } from "react";
 import type { NextPage } from "next";
 import { CallToAction, Footer, Header, Layout, NavBar, Posts, FeaturedProducts, Review, Services } from "@/components";
@@ -14,7 +13,7 @@ const Home: FC<NextPage> = () => {
   return (<Layout title="NextBasket" keywords="Home" description="Shop at your convenience" >
     <>
       <NavBar />
-      {/* <Header /> */}
+      <Header />
       <FeaturedProducts />
       <Services />
       <Posts />

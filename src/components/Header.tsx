@@ -1,3 +1,5 @@
+'use client'
+
 import { Box, Button, Container, Grid, ImageList, ImageListItem, Typography } from '@mui/material'
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
@@ -20,13 +22,56 @@ function srcset(image: string, size: number, rows = 1, cols = 1) {
     };
 }
 
+const headerTitle = <>
+    <Typography variant="h6" component="div" sx={{ fontSize: '14px', fontWeight: 700, color: '#2DC071' }} >5 Items
+    </Typography>
+    <Typography variant="h3" component="div" sx={{ fontSize: '24px', fontWeight: 700, color: '#252B42' }} >FURNITURE
+    </Typography>
+    <Typography variant="h6" component="div" sx={{ fontSize: '14px', fontWeight: 700, color: '#252B42' }} >Read More
+    </Typography>
+</>
+
+
+
 
 const Header = () => {
 
+    return (<Container maxWidth="lg" sx={{ marginTop: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }} className='grid-item' >
+        <img src='/assets/images/header-Img1.png' className='image-one grid-item-one' />
+        <Box sx={{ display: { xs: 'none', lg: 'block' }, position: 'absolute', top: { lg: '40px' }, left: '50px' }} >
+            <Typography variant="h6" component="div" sx={{ fontSize: '14px', fontWeight: 700, color: '#2DC071' }} >5 Items
+            </Typography>
+            <Typography variant="h2" component="div" sx={{ fontSize: '40px', fontWeight: 700, color: '#252B42' }} >FURNITURE
+            </Typography>
+            <Typography variant="h6" component="div" sx={{ fontSize: '14px', fontWeight: 700, color: '#252B42' }} >Read More
+            </Typography>
+        </Box>
+        <img src='/assets/images/header-Img2.png' className='image-two grid-item-two' />
+        <Box sx={{ display: { xs: 'none', lg: 'block' }, position: 'absolute', top: '20px', right: '530px' }} >
+            {headerTitle}
+        </Box>
+        <div className="grid-item-three">
+            <img src='/assets/images/header-Img3.png' className='image-three ' />
+            <Box sx={{ display: { xs: 'none', lg: 'block' }, position: 'absolute', top: '340px', right: '530px' }} >
+                {headerTitle}
+            </Box>
+            <img src='/assets/images/header-Img4.png' className='image-four ' />
+            <Box sx={{ display: { xs: 'none', lg: 'block' }, position: 'absolute', top: '340px', right: '190px' }} >
+                {headerTitle}
+            </Box>
+        </div>
+    </Container>
 
-    return (
-        <Container maxWidth="lg" sx={{ marginTop: '80px' }} >
-            <ImageList
+
+    )
+}
+
+// <Container maxWidth="lg" sx={{ marginTop: '80px' }} >
+//     <Box > </Box>
+
+// </Container>
+
+{/* <ImageList
                 sx={{ width: 1150, height: 250 }}
                 variant="quilted"
                 cols={4}
@@ -41,10 +86,10 @@ const Header = () => {
                         />
                     </ImageListItem>
                 ))}
-            </ImageList>
-        </Container>
-    )
-}
+            </ImageList> */}
+
+
+
 {/* <Grid container spacing={4}>
     
     <Grid item xs={12} sm={12} md={6}>

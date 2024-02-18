@@ -8,7 +8,7 @@ import defaultTheme from "../../utils/defaultTheme";
 import { Provider } from "react-redux";
 import { persistor, store } from "../store";
 import { PersistGate } from "redux-persist/integration/react";
-// import "@/styles/globals.css";
+import "@/styles/globals.css";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
